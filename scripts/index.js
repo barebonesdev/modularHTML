@@ -26,11 +26,6 @@ function index (req, res) {
 }
 
 function render (req, res) {
-  if (!req.url.includes('.html')) {
-    // console.log(`Please link your files including '.html'`)
-    res.send(`Please link your files including '.html'`)
-    return
-  }
 
   const id = req.url.replace('/', '').replace('.html', '')
 
