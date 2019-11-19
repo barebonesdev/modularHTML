@@ -1,4 +1,12 @@
 # ModularHTML
+
+Forked from [jeroentvb](https://github.com/jeroentvb/modularHTML), all credit to them!
+
+This forked version is different in that it...
+
+* Removes the "Must link to .html" requirement (assumes you'll be hosting site on a server that will resolve those)
+
+
 This project uses ejs to allow building a static website from modular ejs (HTML) files.  
 It's using ejs because you won't need to learn a new language, only a few new tags.  
 More info on ejs [here](https://ejs.co/)
@@ -18,7 +26,7 @@ Build your website in the [src](src/) folder. The page templates should go in [s
 To develop the website, this app uses a simple [express](https://www.npmjs.com/package/express) server. You can run the server using `npm start`.  
 
 #### Linking
-Linking to another file is the same as you would in a static html file, so link to `/index.html` and **not** to `/index`, because that won't work after compiling.
+Unlike the original repo, you can link by `/platforms` rather than `/platforms.html`... just make sure you host your static files on a server that resolves those.
 
 #### CSS preprocessor
 You can use your own css preprocessor if you so desire. Just make sure changes in your source file are being watched and compiled a css file and make sure it's linked in [head.ejs](src/partials/head.ejs). Otherwise changes won't show up or be included in the compiled website.  
